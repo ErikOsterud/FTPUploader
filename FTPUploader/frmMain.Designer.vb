@@ -27,6 +27,8 @@ Partial Class frmMain
         Me.Label1 = New System.Windows.Forms.Label()
         Me.website = New System.Windows.Forms.LinkLabel()
         Me.notification = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.fswWatcher = New System.IO.FileSystemWatcher()
+        CType(Me.fswWatcher, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -53,6 +55,12 @@ Partial Class frmMain
         Me.notification.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info
         Me.notification.Icon = CType(resources.GetObject("notification.Icon"), System.Drawing.Icon)
         '
+        'fswWatcher
+        '
+        Me.fswWatcher.EnableRaisingEvents = True
+        Me.fswWatcher.Path = "C:\Users\Erik\Desktop\Test"
+        Me.fswWatcher.SynchronizingObject = Me
+        '
         'frmMain
         '
         Me.AllowDrop = True
@@ -69,6 +77,7 @@ Partial Class frmMain
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "FTP Uploader"
         Me.TopMost = True
+        CType(Me.fswWatcher, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -76,5 +85,6 @@ Partial Class frmMain
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents website As System.Windows.Forms.LinkLabel
     Friend WithEvents notification As System.Windows.Forms.NotifyIcon
+    Friend WithEvents fswWatcher As System.IO.FileSystemWatcher
 
 End Class
