@@ -5,6 +5,9 @@
 #app.config
 app.config
 
+#settings.settings
+[Ss]ettings.settings
+
 # User-specific files
 *.suo
 *.user
