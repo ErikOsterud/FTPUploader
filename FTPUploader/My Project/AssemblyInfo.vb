@@ -9,10 +9,10 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("FTPUploader")> 
-<Assembly: AssemblyDescription("")> 
+<Assembly: AssemblyDescription("Test project for a drag and drop FTPUploader")> 
 <Assembly: AssemblyCompany("")> 
 <Assembly: AssemblyProduct("FTPUploader")> 
-<Assembly: AssemblyCopyright("Copyright ©  2012")> 
+<Assembly: AssemblyCopyright("Copyright Erik Osterud ©  2015")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>
