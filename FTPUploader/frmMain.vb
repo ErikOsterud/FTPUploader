@@ -48,6 +48,8 @@
     End Sub
 
     Private Sub fswWatcher_Changed(ByVal sender As Object, ByVal e As System.IO.FileSystemEventArgs) Handles fswWatcher.Changed
+        'TODO 
+        'Add automated upload (hot folder) based on new images
         'MsgBox("File- " & e.FullPath.ToString & " modified at: " & System.DateTime.Now)
     End Sub
 
