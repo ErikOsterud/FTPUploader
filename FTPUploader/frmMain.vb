@@ -61,6 +61,7 @@
                 Dim tempName As String = Guid.NewGuid.ToString & ".jpg"
                 oImgObj.Save(tempName, System.Drawing.Imaging.ImageFormat.Jpeg)
                 uploadFiles(tempName, tempName)
+                My.Computer.FileSystem.DeleteFile(tempName)
             End If
         End If
     End Sub
