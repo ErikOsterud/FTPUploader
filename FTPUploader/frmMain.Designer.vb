@@ -28,6 +28,7 @@ Partial Class frmMain
         Me.website = New System.Windows.Forms.LinkLabel()
         Me.notification = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.fswWatcher = New System.IO.FileSystemWatcher()
+        Me.btnAddFromCB = New System.Windows.Forms.Button()
         CType(Me.fswWatcher, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -62,12 +63,22 @@ Partial Class frmMain
         Me.fswWatcher.Path = "C:\Users\Erik\Desktop\Test"
         Me.fswWatcher.SynchronizingObject = Me
         '
+        'btnAddFromCB
+        '
+        Me.btnAddFromCB.Location = New System.Drawing.Point(58, 3)
+        Me.btnAddFromCB.Name = "btnAddFromCB"
+        Me.btnAddFromCB.Size = New System.Drawing.Size(110, 23)
+        Me.btnAddFromCB.TabIndex = 2
+        Me.btnAddFromCB.Text = "&Add from clipboard"
+        Me.btnAddFromCB.UseVisualStyleBackColor = True
+        '
         'frmMain
         '
         Me.AllowDrop = True
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(222, 70)
+        Me.Controls.Add(Me.btnAddFromCB)
         Me.Controls.Add(Me.website)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -87,5 +98,6 @@ Partial Class frmMain
     Friend WithEvents website As System.Windows.Forms.LinkLabel
     Friend WithEvents notification As System.Windows.Forms.NotifyIcon
     Friend WithEvents fswWatcher As System.IO.FileSystemWatcher
+    Friend WithEvents btnAddFromCB As System.Windows.Forms.Button
 
 End Class
