@@ -54,6 +54,7 @@ Partial Class frmMain
         '
         Me.notification.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info
         Me.notification.Icon = CType(resources.GetObject("notification.Icon"), System.Drawing.Icon)
+        Me.notification.Visible = True
         '
         'fswWatcher
         '
