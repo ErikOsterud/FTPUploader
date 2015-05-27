@@ -29,13 +29,19 @@ Partial Class frmMain
         Me.notification = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.fswWatcher = New System.IO.FileSystemWatcher()
         Me.btnAddFromCB = New System.Windows.Forms.Button()
+        Me.fbd = New System.Windows.Forms.FolderBrowserDialog()
+        Me.msToolbar = New System.Windows.Forms.MenuStrip()
+        Me.tstmiFile = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsmiSettings = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsmiQuit = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.fswWatcher, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.msToolbar.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(55, 29)
+        Me.Label1.Location = New System.Drawing.Point(55, 61)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(113, 13)
         Me.Label1.TabIndex = 0
@@ -44,7 +50,7 @@ Partial Class frmMain
         'website
         '
         Me.website.AutoSize = True
-        Me.website.Location = New System.Drawing.Point(64, 48)
+        Me.website.Location = New System.Drawing.Point(64, 80)
         Me.website.Name = "website"
         Me.website.Size = New System.Drawing.Size(94, 13)
         Me.website.TabIndex = 1
@@ -65,31 +71,63 @@ Partial Class frmMain
         '
         'btnAddFromCB
         '
-        Me.btnAddFromCB.Location = New System.Drawing.Point(58, 3)
+        Me.btnAddFromCB.Location = New System.Drawing.Point(58, 35)
         Me.btnAddFromCB.Name = "btnAddFromCB"
         Me.btnAddFromCB.Size = New System.Drawing.Size(110, 23)
         Me.btnAddFromCB.TabIndex = 2
         Me.btnAddFromCB.Text = "&Add from clipboard"
         Me.btnAddFromCB.UseVisualStyleBackColor = True
         '
+        'msToolbar
+        '
+        Me.msToolbar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tstmiFile})
+        Me.msToolbar.Location = New System.Drawing.Point(0, 0)
+        Me.msToolbar.Name = "msToolbar"
+        Me.msToolbar.Size = New System.Drawing.Size(235, 24)
+        Me.msToolbar.TabIndex = 3
+        Me.msToolbar.Text = "MenuStrip1"
+        '
+        'tstmiFile
+        '
+        Me.tstmiFile.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiSettings, Me.tsmiQuit})
+        Me.tstmiFile.Name = "tstmiFile"
+        Me.tstmiFile.Size = New System.Drawing.Size(37, 20)
+        Me.tstmiFile.Text = "&File"
+        '
+        'tsmiSettings
+        '
+        Me.tsmiSettings.Name = "tsmiSettings"
+        Me.tsmiSettings.Size = New System.Drawing.Size(152, 22)
+        Me.tsmiSettings.Text = "&Settings"
+        '
+        'tsmiQuit
+        '
+        Me.tsmiQuit.Name = "tsmiQuit"
+        Me.tsmiQuit.Size = New System.Drawing.Size(152, 22)
+        Me.tsmiQuit.Text = "&Quit"
+        '
         'frmMain
         '
         Me.AllowDrop = True
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(222, 70)
+        Me.ClientSize = New System.Drawing.Size(235, 120)
         Me.Controls.Add(Me.btnAddFromCB)
         Me.Controls.Add(Me.website)
         Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.msToolbar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Location = New System.Drawing.Point(10, 10)
+        Me.MainMenuStrip = Me.msToolbar
         Me.MaximizeBox = False
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "FTP Uploader"
         Me.TopMost = True
         CType(Me.fswWatcher, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.msToolbar.ResumeLayout(False)
+        Me.msToolbar.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -99,5 +137,10 @@ Partial Class frmMain
     Friend WithEvents notification As System.Windows.Forms.NotifyIcon
     Friend WithEvents fswWatcher As System.IO.FileSystemWatcher
     Friend WithEvents btnAddFromCB As System.Windows.Forms.Button
+    Friend WithEvents fbd As System.Windows.Forms.FolderBrowserDialog
+    Friend WithEvents msToolbar As System.Windows.Forms.MenuStrip
+    Friend WithEvents tstmiFile As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents tsmiSettings As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents tsmiQuit As System.Windows.Forms.ToolStripMenuItem
 
 End Class
