@@ -97,13 +97,13 @@ Partial Class frmMain
         'tsmiSettings
         '
         Me.tsmiSettings.Name = "tsmiSettings"
-        Me.tsmiSettings.Size = New System.Drawing.Size(152, 22)
+        Me.tsmiSettings.Size = New System.Drawing.Size(116, 22)
         Me.tsmiSettings.Text = "&Settings"
         '
         'tsmiQuit
         '
         Me.tsmiQuit.Name = "tsmiQuit"
-        Me.tsmiQuit.Size = New System.Drawing.Size(152, 22)
+        Me.tsmiQuit.Size = New System.Drawing.Size(116, 22)
         Me.tsmiQuit.Text = "&Quit"
         '
         'frmMain

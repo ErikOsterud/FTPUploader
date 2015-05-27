@@ -1,4 +1,8 @@
-﻿Public Class frmMain
+﻿'Erik Osterud
+'FTPU
+'2015
+
+Public Class frmMain
 
     Private Sub frmMain_DragEnter(ByVal sender As Object, ByVal e As DragEventArgs) Handles Me.DragEnter 'Drag and drop handler
         If e.Data.GetDataPresent(DataFormats.FileDrop) Then
@@ -65,4 +69,14 @@
             End If
         End If
     End Sub
+
+    Public Sub frmMain_FormClosing(ByVal send As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
+        Me.Close()
+    End Sub
+
+    Private Sub tsmiSettings_Click(sender As Object, e As EventArgs) Handles tsmiSettings.Click
+        frmSettings.Show()
+        Me.Hide()
+    End Sub
+
 End Class
